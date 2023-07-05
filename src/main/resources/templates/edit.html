@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/admin/{id}(id=${user.getId()})}" th:object="${user}">
+
+    <input type="hidden" th:field="*{id}" id="id"/>
+
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+
+    <label for="surname">Enter lastname: </label>
+    <input type="text" th:field="*{surname}" id="surname"/>
+
+    <label for="dob">Enter dob: </label>
+    <input type="date" th:field="*{dob}" id="dob"/>
+
+    <br/>
+    <input type="submit" value="Update!"/>
+</form>
+<button class="buttonLogout" onclick="window.location.href ='logout';">Logout</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание нового клиента</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/admin}" th:object="${user}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name">
+    <label for="surname">Enter surname: </label>
+    <input type="text" th:field="*{surname}" id="surname">
+    <label for="dob">Enter dob: </label>
+    <input type="date" th:field="*{dob}" id="dob">
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+<button class="buttonLogout" onclick="window.location.href ='logout';">Logout</button>
+</body>
+</html>
