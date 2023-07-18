@@ -41,7 +41,7 @@ public class AdminsController {
         return user;
     }
 
-    @DeleteMapping("/{id}/delete")
+    @DeleteMapping("/delete/{id}")
     public String removeUser(@PathVariable("id") long id) {
         usersService.removeUser(id);
         return "User deleted";

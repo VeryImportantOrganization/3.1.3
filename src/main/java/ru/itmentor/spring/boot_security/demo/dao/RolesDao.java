@@ -9,5 +9,5 @@ public interface RolesDao {
     void editRole(Role role);
     void removeRole(long id);
     Role getRoleById(long id);
-    List<Role> rolesList();
+    List<Role> getAllRoles();
 }
