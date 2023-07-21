@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.itmentor.spring.boot_security.demo.dao.UsersDao;
-import ru.itmentor.spring.boot_security.demo.models.Role;
-import ru.itmentor.spring.boot_security.demo.models.User;
+import ru.itmentor.spring.boot_security.demo.entities.Role;
+import ru.itmentor.spring.boot_security.demo.entities.User;
 
 import java.util.Collection;
 import java.util.List;

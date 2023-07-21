@@ -1,4 +1,4 @@
-package ru.itmentor.spring.boot_security.demo.models;
+package ru.itmentor.spring.boot_security.demo.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

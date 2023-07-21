@@ -1,8 +1,10 @@
 package ru.itmentor.spring.boot_security.demo.dao;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itmentor.spring.boot_security.demo.models.User;
+import ru.itmentor.spring.boot_security.demo.entities.User;
+import ru.itmentor.spring.boot_security.demo.exceptions.DemoAppException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -36,7 +38,12 @@ public class UsersDaoImpl implements UsersDao {
 
     @Override
     public User getUserById(long id) {
-        return entityManager.find(User.class, id);
+        User user = entityManager.find(User.class, id);
+        if (user == null) {
+            throw new DemoAppException("User not found", HttpStatus.NOT_FOUND);
+        } else {
+            return user;
+        }
     }
 
     @Override
