@@ -2,7 +2,7 @@ package ru.itmentor.spring.boot_security.demo.dao;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itmentor.spring.boot_security.demo.models.Role;
+import ru.itmentor.spring.boot_security.demo.entities.Role;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
